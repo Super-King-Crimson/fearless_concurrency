@@ -1,3 +1,6 @@
+pub mod creation;
+pub mod move_closures;
+
 pub fn explain() {
     println!("Threads run code simultaneously");
 
@@ -18,4 +21,6 @@ pub fn explain() {
     //multi-threaded programming takes careful thought and a different structure than single-threaded
 
     //Rust programming uses a 1:1 model: so one Rust thread = one operating system thread
+    creation::explain();
+    move_closures::explain();
 }

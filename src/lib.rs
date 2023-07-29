@@ -1,3 +1,6 @@
+pub use std::thread;
+pub use std::time::Duration; 
+
 pub mod topic {
     pub fn introduce() {
         println!("\
