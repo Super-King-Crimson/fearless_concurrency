@@ -44,9 +44,6 @@ fn elaborate() {
         println!("ok im done sorry for blocking you");
     });
 
-    //by calling this the main thread will block the current thread 
-    //until the thread represented by the handle terminates
-
     for i in 0..10 {
         println!("Hey this is {i} from main thread, ya done yet spawned thread?");
         thread::sleep(Duration::from_millis(10));
@@ -54,6 +51,7 @@ fn elaborate() {
 
     println!("ok you're taking too long i'll just wait");
 
+    //by calling this the main thread will block the current thread until the thread in this handle finishes
     thread.join().unwrap();
 
     //see this doesn't print until the loop is done and "sorry for blocking you" is printed
