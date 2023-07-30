@@ -11,7 +11,7 @@ pub fn explain() {
     let (tx, rx) = mpsc::channel();
     //mpsc stands for 'multiple producer, single receiver:' 
         //rust channels can have a lot of transmitters but only one receiver to consume values
-    //returns a tuple: first element is transmitter (tx), second element is receiver (rx)
+        //returns a tuple: first element is transmitter (tx), second element is receiver (rx)
 
     //Note the move closure: we have to move tx into the thread to use it
     thread::spawn(move || {
