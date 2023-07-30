@@ -24,6 +24,9 @@ pub fn explain() {
         thread::sleep(Duration::from_secs(2));
         tx.send(String::from("here's some more data")).unwrap();
         //and you send can multiple pieces of data per thread
+
+        //Also note that a channel can only send one type, so this is an error
+        // tx.send("hi").unwrap();
     });
 
     //speaking of join, the method that blocks execution until a thread is done running
