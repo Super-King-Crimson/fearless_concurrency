@@ -28,3 +28,5 @@ pub mod threads;
 pub mod message_passing;
 
 pub mod shared_state; 
+
+pub mod traits;
