@@ -1,6 +1,7 @@
 pub use std::thread;
 pub use std::time::Duration; 
-pub use std::sync::mpsc;
+pub use std::sync::{mpsc, Mutex, MutexGuard, Arc};
+pub use std::rc::Rc;
 
 pub mod topic {
     pub fn introduce() {
